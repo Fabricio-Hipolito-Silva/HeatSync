@@ -1,0 +1,15 @@
+# PlatformIO
+.pio/
+.build/
+
+# VSCode
+.vscode/
+
+# Linux
+*~
+*.swp
+.cache/
+
+# Outros sistemas
+.DS_Store
+Thumbs.db
