@@ -1,6 +1,9 @@
 # PlatformIO
 .pio/
 .build/
+lib/Adafruit_Sensor-master
+lib/DHT-sensor-library-master
+lib/TFT_eSPI-master
 
 # VSCode
 .vscode/
