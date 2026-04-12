@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <DHT.h>
 #include <TFT_eSPI.h>
+#include "face.h"
 
 //Definições
 #define DHTPIN 40
@@ -29,10 +30,9 @@ void setup() {
   tela.drawString("Quarto", 80, 10);
 // Body
   tela.setTextDatum(ML_DATUM);
-  tela.drawString("Umidade: ", 10, Y_U);
-  tela.drawString("Temperatura: ", 10, Y_T);
-  tela.drawString("Sens.Termica: ", 10, Y_ST);
-
+  tela.drawString("Umidade: ", 5, Y_U);
+  tela.drawString("Temperatura: ", 5, Y_T);
+  tela.drawString("Sen.Termica: ", 5, Y_ST);
 
 }
 
@@ -67,11 +67,11 @@ void loop() {
   Serial.println(F("---------------------------------\n"));
 
   // Limpa só a área dos valores
-  tela.fillRect(X_F - 70, Y_U - 12, 70, 24, TFT_BLACK); 
-  tela.fillRect(X_F - 70, Y_T - 12, 70, 24, TFT_BLACK);
-  tela.fillRect(X_F - 70, Y_ST - 12, 70, 24, TFT_BLACK);
-  //A lógica é: ele começa a -70 pixels do final do texto, e um pouco acima, (-12).
-  //Depois ele limpa em preto os 70 pixels de largura e 24 de algura, pra pegar todo o texto (Mais por garantia)
+  tela.fillRect(X_F - 65, Y_U - 12, 65, 24, TFT_BLACK); 
+  tela.fillRect(X_F - 65, Y_T - 12, 65, 24, TFT_BLACK);
+  tela.fillRect(X_F - 65, Y_ST - 12, 65, 24, TFT_BLACK);
+  //A lógica é: ele começa a -65 pixels do final do texto, e um pouco acima, (-12).
+  //Depois ele limpa em preto os 60 pixels de largura e 24 de algura, pra pegar todo o texto (Mais por garantia)
 
   //Alinhamento
   tela.setTextDatum(MR_DATUM);
