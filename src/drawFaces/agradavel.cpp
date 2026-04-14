@@ -2,7 +2,7 @@
 #include <TFT_eSPI.h>
 #include "face.h"
 
-void desenharBoca(TFT_eSPI &tft,int cx, int cy, int r) {
+void desenharBocaAgradavel(TFT_eSPI &tft,int cx, int cy, int r) {
   for (int ang = 0; ang <= 180; ang++) {
     float rad = ang * 3.1416 / 180.0;
 
@@ -13,14 +13,15 @@ void desenharBoca(TFT_eSPI &tft,int cx, int cy, int r) {
   }
 }
 
-void desenharOlhos(TFT_eSPI &tft){
+void desenharOlhosAgradavel(TFT_eSPI &tft){
   tft.drawLine(60,10,60,50,TFT_GREEN);
   tft.drawLine(100,10,100,50,TFT_GREEN);
 }
 
 void desenharRostoAgradavel(TFT_eSPI &tft){
-  desenharOlhos(tft);
-  desenharBoca(tft,80,70,30);
+  tft.fillScreen(TFT_BLACK);
+  desenharOlhosAgradavel(tft);
+  desenharBocaAgradavel(tft,80,70,30);
   tft.setTextDatum(MC_DATUM);
   tft.setTextColor(TFT_GREEN);
   tft.setTextFont(2);

@@ -33,6 +33,8 @@ void desenharOlhos(TFT_eSPI &tft){
 };
 
 void desenharRostoFrio(TFT_eSPI &tft){
+tft.fillScreen(TFT_BLACK);
+desenharOlhos(tft);
 desenharBoca(tft, cx, cy +40, 30);
   tft.setTextDatum(MC_DATUM);
   tft.setTextColor(TFT_BLUE);

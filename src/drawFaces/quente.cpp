@@ -4,6 +4,7 @@
 
 
 void desenharRostoQuente(TFT_eSPI &tft){
+  tft.fillScreen(TFT_BLACK);
   tft.drawLine(40, 20, 70, 60, TFT_RED);
   tft.drawLine(120, 20, 90, 60, TFT_RED);
   tft.drawLine(50, 90, 110, 90, TFT_RED);
